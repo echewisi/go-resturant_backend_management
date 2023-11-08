@@ -21,15 +21,16 @@ func main(){
 
 	router:= gin.New()
 	router.Use(gin.Logger())
-	routes.userRouter(router)
-	router.Use(middleware.Authentication)
+	routes.userRoutes(router)
+	router.Use(middleware.Authentication())
 
-	routes.foodRouter(router)
-	routes.menuRouter(router)
-	routes.tableRouter(router)
-	routes.orderRouter(router)
-	routes.orderItemRouter(router)
-	routes.invoiceRouter(router)
+//engaging the routes
+	routes.foodRoutes(router)
+	routes.menuRoutes(router)
+	routes.tableRoutes(router)
+	routes.orderRoutes(router)
+	routes.orderItemRoutes(router)
+	routes.invoiceRoutes(router)
 
 	router.Run(":" + port)
 }
