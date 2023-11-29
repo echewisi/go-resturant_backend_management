@@ -5,7 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func OrderRoutes( incomingroutes *gin.Engine){
+func orderRoutes( incomingroutes *gin.Engine){
 	incomingroutes.GET("/get_orders", controllers.GetOrders())
 	incomingroutes.GET("/get_orders/:order_id", controllers.GetOrder())
 	incomingroutes.POST("/create_order", controllers.GetOrder())

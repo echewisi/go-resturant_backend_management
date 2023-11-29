@@ -7,7 +7,7 @@ import (
 	middleware "resturant_backend/middleware"
 	controllers "resturant_backend/controllers"
 	database "resturant_backend/database"
-	"go.mongo.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
 var foodCollection *mongo.Collection= database.OpenCollection(database.Client, "food")
