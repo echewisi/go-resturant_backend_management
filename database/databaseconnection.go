@@ -36,5 +36,7 @@ func DBinstance() *mongo.Client {
 var Client *mongo.Client= DBinstance()
 
 func OpenCollection(Client *mongo.Client, collectionName string) *mongo.Collection{
-	var collection *mongo.Collection= Client.Database("resturant")
+	var collection *mongo.Collection= Client.Database("resturant").Collection(collectionName)
+
+	return collection
 }

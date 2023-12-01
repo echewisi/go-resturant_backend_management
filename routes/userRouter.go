@@ -11,5 +11,4 @@ func userRoutes(incomingRoutes *gin.Engine){
 	incomingRoutes.GET("/users/:user_id", controllers.getUser())
 	incomingRoutes.POST("/signup", controllers.signupUser())
 	incomingRoutes.POST("/login", controllers.loginUser())
-
 }
